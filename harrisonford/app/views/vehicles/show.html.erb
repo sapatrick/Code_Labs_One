@@ -1,0 +1,21 @@
+<article> 
+  <p class="p-nav">
+    <%= link_to("All Vehicles", vehicles_path) %> | <%= link_to 'Edit Vehicle', edit_vehicle_path(@vehicle) %> | <%= link_to "Delete Vehicle", vehicle_path(@vehicle), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  </p> 
+  
+    <div class="record">
+      <p>
+      <%= image_for(@vehicle, "") %><br />
+        <h1> <%= full_vehicle_title(@vehicle) %></h1>
+        <br />
+        <strong>Condition:</strong> <%= @vehicle.condition %> | <strong>Mileage:</strong> <%= @vehicle.mileage %><br />
+        <strong>Price:</strong> <%= format_vehicle_price(@vehicle) %><br />
+        <strong>QOH:</strong> <%= @vehicle.count %><br />
+        <strong>Description:</strong><br />
+           <%= @vehicle.description %>
+        </p>
+    </div>
+  <p class="p-nav">
+    <%= link_to("All Vehicles", vehicles_path) %> | <%= link_to 'Edit Vehicle', edit_vehicle_path(@vehicle) %> | <%= link_to "Delete Vehicle", vehicle_path(@vehicle), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  </p>
+</article>

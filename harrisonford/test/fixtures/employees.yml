@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  email_address: MyString
+  address_line_one: MyString
+  address_line_two: MyString
+  address_line_three: MyString
+  hire_date: MyString
+  employee_image_file: MyString
+  sales_team: MyString
+  sales_to_date: 1
+  sales_last_30_days: 1
+
+two:
+  first_name: MyString
+  last_name: MyString
+  email_address: MyString
+  address_line_one: MyString
+  address_line_two: MyString
+  address_line_three: MyString
+  hire_date: MyString
+  employee_image_file: MyString
+  sales_team: MyString
+  sales_to_date: 1
+  sales_last_30_days: 1

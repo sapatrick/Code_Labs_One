@@ -1,0 +1,24 @@
+
+<article>  
+  <h1> Vehicle Inventory</h1>
+    <!--<p>
+      <h3> QOH: <%= pluralize(@vehicles.size, 'Vehicle') %></h3>
+    </p>-->
+    
+    <% @vehicles.each do |vehicle| %>
+    <div class="record">
+      <%= image_for(vehicle, "record-image") %>
+      <p>
+        <strong>
+          <u><%= link_to full_vehicle_title(vehicle), vehicle %></u>
+        </strong>
+          <br />
+        <strong>Condition:</strong> <%= vehicle.condition %> | <strong>Mileage:</strong> <%= vehicle.mileage %><br />
+        <strong>Price:</strong> <%= format_vehicle_price(vehicle) %><br />
+        <strong>QOH:</strong> <%= vehicle.count %><br /><br />
+        <strong>Description:</strong><br />
+           <%= vehicle.description %>
+      </p>
+    </div>
+      <% end %>
+</article>
