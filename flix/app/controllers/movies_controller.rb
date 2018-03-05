@@ -9,6 +9,7 @@ before_action :require_admin, except: [:index, :show]
 
   def show
     @movie = Movie.find(params[:id])
+    @fans = @movie.fans
   end
 
   def edit
