@@ -1,0 +1,38 @@
+<div class="wb-bro">
+	<p>
+	  Welcome back, Admin.
+	</p>
+</div>
+
+<div class="employees-size">
+	<p class="employees-size-text">
+		<%= @employees.size %>
+	</p>
+	<p class="employees-size-smol">
+	EMPLOYEES
+    </p>
+</div>
+<div class="date-and-time">
+	<p class="day-of-the-week">MONDAY</p>
+	<p>MARCH 05, 2018. 7:40 P.M. CST</p>
+</div>
+
+<div style="clear:both;">
+
+<div class="employees-heading"> </div>
+
+<p>
+	By default, employees are listed by sales team names. To switch and view employees alphabetized by last name, <a href="#">click here</a>.
+</p>
+
+<div class="employees-heading"> Black Squadron </div>
+<br />
+
+<% @employees.each do |employee| %>
+	<div class="record">
+        &clubs; <%= link_to employee_last_name_first(employee), employee %></li>
+    </div>
+<% end %>
+
+<p><i>List employees in teams? Black Squadron, Rebellion, First Order, Ren?
+	</i></p>

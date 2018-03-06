@@ -10,37 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180211050312) do
-
-  create_table "customers", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email_address"
-    t.string "address_line_one"
-    t.string "address_line_two"
-    t.string "address_line_three"
-    t.integer "vehicle_id"
-    t.text "original_agreement"
-    t.integer "monthly_payment"
-    t.integer "months_left"
-    t.string "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["vehicle_id"], name: "index_customers_on_vehicle_id"
-  end
+ActiveRecord::Schema.define(version: 20180306002514) do
 
   create_table "employees", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "firstname"
+    t.string "lastname"
     t.string "email_address"
     t.string "address_line_one"
     t.string "address_line_two"
     t.string "address_line_three"
     t.string "hire_date"
+    t.boolean "active"
     t.string "employee_image_file"
     t.string "sales_team"
     t.integer "sales_to_date"
-    t.integer "sales_last_30_days"
+    t.integer "sales_last_thirty_days"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

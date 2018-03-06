@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
+@import "colors";
+
+body {
+	font-size: 1.15em;
+}
 
 .footer {
  	text-align: center; 
@@ -20,3 +25,11 @@
  	color: #D6D6D6; 
  	background: #000;
  }
+
+.wb-bro {
+	background-color: #000;
+	color: #fff;
+	font-size: 1.5em;
+	text-align: center;
+	padding: 1%;
+}
