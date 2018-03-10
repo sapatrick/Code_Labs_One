@@ -5,6 +5,5 @@ Rails.application.routes.draw do
   	resources :transactions
   end
 	root "home#index"
-	get "vehicles" => "vehicles#index"
     resources :vehicles
 end
