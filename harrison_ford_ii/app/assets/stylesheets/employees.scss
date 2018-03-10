@@ -9,40 +9,69 @@
 	color: $planet-crait-red;
 	text-align: center;
 	display: block;
-	width: 35%;
+	width: 18%;
 	float: left;
+	padding: 10px;
 }
 
 .employees-size-text {
-	font-size: 7.85em;
+	font-size: 7.55em;
 	font-weight: bold;
 }
 
-.employees-size-smol {
-	font-size: 1.85em;
-	font-variant: small-caps;
-}
-
-.day-of-the-week {
-	font-size: 2.85em;
+.best-salesperson {
+	font-size: 2em;
 	font-weight: bold;
 }
 
-.date-and-time {
+.best-salesperson-block {
     font-size: 1.35em;
-	font-variant: small-caps;
+	font-variant: all-caps;
 	display: block;
-	width: 55%;
+	width: 60%;
 	text-align: center;
 	vertical-align: middle;
-	float: right;
-	padding: 4.5%;
+	float: left;
+}
+
+.best-salesperson-quick-stats {	
+	background-color: $div-rec-bg-color;
+	font-size: 1.51em;
+	font-variant: all-caps;
+	text-align: center;
+	display: block;
+	width: 18%;
+	float: left;
+	padding: 10px;
 }
 
 .employees-heading {
 	background-color: $vader;
-	font-size: 1.85em;
+	font-size: 2em;
+	font-weight: bold;
 	text-align: center;
 	color: $stormtrooper;
-	padding: 3.5%;
+	padding: 1%;
+}
+
+.employees-footing {
+	background-color: $vader;
+	font-size: 2em;
+	text-align: center;
+	color: $stormtrooper;
+	padding: 2%;
+}
+
+.employee-list {
+	font-size: 1.5em;
+
+	a:link, a:active, a:visited {
+		color: $planet-crait-red;
+		font-weight: bold;
+	    text-decoration: none;
+	}
+
+	a:hover {
+		color: $vader;
+	}
 }

@@ -2,6 +2,7 @@
 
   
     <%= render "layouts/navbar" %>
+
         <% if flash[:notice] %>
     <p class="flash notice">
       <%= flash[:notice] %>
@@ -17,3 +18,5 @@
       <%= yield %>
     </div>
     <%= render "layouts/footer" %>
+  </body>
+</html>

@@ -1,38 +1,46 @@
-<div class="wb-bro">
+<article> 
+<div class="employees-heading">
 	<p>
-	  Welcome back, Admin.
+	  EMPLOYEES
 	</p>
 </div>
 
 <div class="employees-size">
 	<p class="employees-size-text">
+		
 		<%= @employees.size %>
-	</p>
-	<p class="employees-size-smol">
-	EMPLOYEES
-    </p>
-</div>
-<div class="date-and-time">
-	<p class="day-of-the-week">MONDAY</p>
-	<p>MARCH 05, 2018. 7:40 P.M. CST</p>
-</div>
 
+	</p>
+</div>
+<div class="best-salesperson-block">
+	Top Salesperson:
+	<p class="best-salesperson"> POE DAMERON</p>
+	<%= image_tag("ribbon.png", :alt => "Best Salesperson Award", :height => "7.75%", :width => "7.75%") %>
+</div>
+<div class="best-salesperson-quick-stats">
+	<p> Quick </p>
+	<p> Stats </p>
+	<p> Go Here</p>
+</div>
 <div style="clear:both;">
 
-<div class="employees-heading"> </div>
+<div class="employees-footing"> </div>
 
+<br />
 <p>
 	By default, employees are listed by sales team names. To switch and view employees alphabetized by last name, <a href="#">click here</a>.
 </p>
+<br />
 
 <div class="employees-heading"> Black Squadron </div>
 <br />
 
 <% @employees.each do |employee| %>
-	<div class="record">
-        &clubs; <%= link_to employee_last_name_first(employee), employee %></li>
+	<div class="record employee-list">
+        <span class="glyphicon glyphicon-user"></span> <%= link_to employee_last_name_first(employee), employee %></li>
     </div>
 <% end %>
 
 <p><i>List employees in teams? Black Squadron, Rebellion, First Order, Ren?
 	</i></p>
+</article> 

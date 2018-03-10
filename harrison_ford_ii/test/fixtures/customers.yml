@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cfirstname: MyString
+  clastname: MyString
+  cemailaddress: MyString
+  caddress_line_one: MyString
+  caddress_line_two: MyString
+  caddress_line_three: MyString
+
+two:
+  cfirstname: MyString
+  clastname: MyString
+  cemailaddress: MyString
+  caddress_line_one: MyString
+  caddress_line_two: MyString
+  caddress_line_three: MyString

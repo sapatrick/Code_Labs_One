@@ -1,0 +1,17 @@
+<ul id="admins">
+  <% @admins.each do |admin| %>
+    <li>
+      <%= link_to admin.name, admin %>
+    </li>
+  <% end %>
+</ul>
+
+<div class="employees-size">
+	<p class="employees-size-text">
+		$5000
+	</p>
+</div>
+<div class="date-and-time">
+	<p class="day-of-the-week"><%= Date.today.strftime('%A') %></p>
+	<p>MARCH 05, 2018. 7:40 P.M. CST</p>
+</div>

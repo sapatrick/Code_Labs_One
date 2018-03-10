@@ -8,8 +8,40 @@ class EmployeesController < ApplicationController
   	@employee = Employee.find(params[:id])
   end
 
+    def edit
+  	@employee = Employee.find(params[:id])
+  end
+
+  def update
+  	@employee = Employee.find(params[:id])
+    if @employee.update(employee_params)
+    redirect_to @employee, notice: "employee successfully updated!"
+  else
+    render :edit
+  end
+  end
+
+  def new
+  	@employee = Employee.new
+  end
+
+  def create
+    @employee = Employee.new(employee_params)
+    if @employee.save
+    redirect_to @employee, notice: "employee successfully added!"
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    @employee = Employee.find(params[:id])
+    @employee.destroy
+    redirect_to employees_url, alert: "employee successfully deleted!"
+  end
+
 private
-    def vehicle_params
+    def employee_params
     	params.require(:employee).permit(:firstname, :lastname)
     end
 
