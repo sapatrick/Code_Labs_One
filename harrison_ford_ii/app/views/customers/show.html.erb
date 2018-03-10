@@ -1,0 +1,18 @@
+<h1><%= customer_full_name(@customer) %></h1>
+
+<div>
+<h1>Recent Vehicle Purchases:</h1>
+	<div class="record">
+	 Cupcake Ipsum.
+	</div>
+</div>
+
+<div>
+	<h1>Transaction Record:</h1>
+		<% @transactions.each do |transaction| %>
+			<div class="record">
+				<%= transaction.date %>
+    </div>
+<% end %>
+
+</div>

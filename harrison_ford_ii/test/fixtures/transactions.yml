@@ -1,7 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  date_completed: MyString
+  date: MyString
+  employee: one
+  customer: one
 
 two:
-  date_completed: MyString
+  date: MyString
+  employee: two
+  customer: two
