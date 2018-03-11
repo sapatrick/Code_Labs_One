@@ -6,10 +6,7 @@ body {
   color: #000;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.125em;
-  background-image: linear-gradient(to right top, #b9b9b9, #939597, #6d7475, #4b5350, #31342c);
-  background-image: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
+  background-color: #000;
 }
 
 
@@ -74,12 +71,12 @@ header#page-header {
   }
 }
 
+
 footer#page-footer {
   background-color: #000;
   color: #fff;
   padding: 25px;
   display: block;
-  margin-bottom: 0px;
 
   p {
     text-align: center;
@@ -97,25 +94,30 @@ footer#page-footer {
 }
 
 div#wrapper {
-  overflow: hidden;  
+  background-color: #CFCFCF;
+  padding: 50px 50px 50px 50px;
+  padding-bottom: 100px;
+  overflow: hidden;
+
 
   div#container {
     width: 100%;
-	  margin: 0 auto;
-
+    margin: 0 auto;
   }
 
   section#content {
-      width: 75%;
-      padding: 20px;
-        background: rgba(255, 255, 255, 0.35);
-  border-radius: 3px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  z-index: 2;
-  float: right;
+    margin: 0 auto;
+    margin-left: 50px;
+    width: 60%;
+    padding: 20px;
+    z-index: 2;
+    float: left;
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 3px;
+    box-shadow: 0 1px 5px rgba(1, 1, 1, 0.35);
   }
 }
+
 
 
 
@@ -123,7 +125,6 @@ aside#sidebar {
   width: 20%;
   float: left;
   text-align: center;
-  background-color: #000;n
   z-index: 2;
 
   h1 {
@@ -149,24 +150,24 @@ aside#sidebar {
       list-style: none;
 
       li {
-        padding: 4px 0;
-        padding-left: 25px;
-
-        &.movies a {
+        width: 70%;
+      
+        a {
+          margin: 0 auto;
+          margin-bottom: 10px;
+          padding: 10px;
           display: block;
-          background: image-url("arrow.png") no-repeat 10px 8px;
-          padding-left: 35px;
-        }
-
-        &.create-movie a {
-          display: block;
-          background: image-url("add.png") no-repeat 10px 8px;
-          padding-left: 35px;
+          width: 100%;
+          background: rgba(255, 255, 255, 0.15);
+          border-radius: 3px;
+          box-shadow: 0 1px 5px rgba(1, 1, 1, 0.25);        
         }
 
         a:hover {
-          background-color: $accent-color;
-          color: #000;
+          color: #fff;
+          background: rgba(0, 0, 0, 0.85);
+          border-radius: 3px;
+          box-shadow: 0 1px 5px rgba(1, 1, 1, 0.25);
         }
 
         a.active {

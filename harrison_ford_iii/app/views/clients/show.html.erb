@@ -20,7 +20,7 @@
   <p>
   	<strong>Number of Sales Last 30 Days:</strong> <%= @client.sales_last_thirty_days %>
   </p>
-  <p>
+  <p class="content-bubble">
   	<%= link_to 'Edit Client', edit_client_path(@client), class: 'button' %> | 
     <%= link_to 'Delete', @client, 
       class: 'button',

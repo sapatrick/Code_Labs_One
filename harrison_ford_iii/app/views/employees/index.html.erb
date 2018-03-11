@@ -4,15 +4,15 @@
 	<%= @employees.size %>
 </p>
 
-<p>
   <ol>
     <% @employees.each do |employee| %>
-	  <li class="record">
+    <div class="record employee-list">
+	  <li>
 	  	<%= link_to employee_last_name_first(employee), employee %>
-	  </li>  
+	  </li> 
+	</div> 
     <% end %>
   </ol>
-</p>
 
 
 <p>
