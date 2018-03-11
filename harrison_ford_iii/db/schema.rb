@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180310215924) do
+ActiveRecord::Schema.define(version: 20180311001033) do
+
+  create_table "customers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email_address"
+    t.string "address"
+    t.integer "employee_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["employee_id"], name: "index_customers_on_employee_id"
+  end
 
   create_table "dashboards", force: :cascade do |t|
     t.datetime "created_at", null: false

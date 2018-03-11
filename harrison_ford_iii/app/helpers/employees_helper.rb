@@ -15,6 +15,13 @@ module EmployeesHelper
     end
   end
 
+  def sales_last_30_no_nil(employee)
+    if !employee.nil? && !employee.empty?
+      employee.sales_last_thirty_days.to_i
+    else
+      employee.sales_last_thirty_days
+  end
+
   #def employee_image(employee, class_name)
   #  if employee.employee_image_file.blank?
   #    if (!class_name.blank?)
