@@ -10,5 +10,6 @@ class Employee < ApplicationRecord
 #	validates :sales_team, inclusion: { in: SALESTEAM }
 
 #	SALESTEAM = %w(Black_Squadron Outliers)
- has_many :clients, dependent: :destroy
+    
+    has_many :clients, dependent: :destroy
 end

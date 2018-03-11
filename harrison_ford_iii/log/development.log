@@ -1592,3 +1592,321 @@ Processing by ClientsController#index as HTML
 Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-10 20:28:16 -0600
+Processing by DashboardsController#index as HTML
+  Rendering dashboards/index.html.erb within layouts/application
+  Rendered dashboards/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.7ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2018-03-10 20:28:17 -0600
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 30ms (Views: 20.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2018-03-10 20:28:21 -0600
+Processing by ClientsController#new as HTML
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/_form.html.erb (26.8ms)
+  Rendered clients/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 54ms (Views: 46.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2018-03-10 20:29:03 -0600
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eZ0XMEB2MisLLlEB583UJNHQxQL2FC3XYjpoCi+7dsnYCkz6+cHXFllcNQfcFSNmJ6xgWEWab6BnCAs53hbNuA==", "client"=>{"first_name"=>"Elise", "last_name"=>"Elaine", "address"=>"1547 Belair Drive", "email_address"=>"elise@example.com", "date_created(1i)"=>"2018", "date_created(2i)"=>"3", "date_created(3i)"=>"10"}, "commit"=>"Create Client"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/_form.html.erb (1.6ms)
+  Rendered clients/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2018-03-10 20:29:06 -0600
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VOJKAhlOr6nePBPgltSjk4OU9TVu1VH4QRJA+jViueT1dRHIoPlKlIxOd+atDFTRdehQb91bE49EICPJxM8ClQ==", "client"=>{"first_name"=>"Elise", "last_name"=>"Elaine", "address"=>"1547 Belair Drive", "email_address"=>"elise@example.com", "date_created(1i)"=>"2018", "date_created(2i)"=>"3", "date_created(3i)"=>"10"}, "commit"=>"Create Client"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/_form.html.erb (1.6ms)
+  Rendered clients/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2018-03-10 20:29:32 -0600
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-10 20:30:31 -0600
+Processing by DashboardsController#index as HTML
+  Rendering dashboards/index.html.erb within layouts/application
+  Rendered dashboards/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2018-03-10 20:30:32 -0600
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 44ms (Views: 37.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2018-03-10 20:30:33 -0600
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (6.1ms)
+  Rendered employees/new.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `address' for #<Employee:0x00007f859574d480>):
+    11: 	  </p>
+    12:     <p>
+    13:       <%= f.label :address, "Address:" %>
+    14:       <%= f.text_field :address %>
+    15:     </p> 
+    16:     <p>
+    17:       <%= f.label :email_address, "Email Address:" %>
+  
+app/views/employees/_form.html.erb:14:in `block in _app_views_employees__form_html_erb__1410523213599812112_70105857187680'
+app/views/employees/_form.html.erb:1:in `_app_views_employees__form_html_erb__1410523213599812112_70105857187680'
+app/views/employees/new.html.erb:3:in `_app_views_employees_new_html_erb___2872610494627814570_70105857373740'
+Started GET "/employees/new" for 127.0.0.1 at 2018-03-10 20:31:03 -0600
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (9.7ms)
+  Rendered employees/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2018-03-10 20:32:46 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MS+0dfPQQQglZpNviYUbudlmayfEA6dvM3cnxiI8syaQuO+/SmekNXcU92myXez7LxrOfXeN5Rg2RUT105EIVw==", "employee"=>{"first_name"=>"Finn", "last_name"=>"Stormtrooper", "email_address"=>"fn2187@example.com", "hire_date(1i)"=>"2018", "hire_date(2i)"=>"3", "hire_date(3i)"=>"10", "active"=>"1", "employee_image_file"=>"finn-stormtrooper.png"}, "commit"=>"Create Employee"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "email_address", "active", "employee_image_file", "created_at", "updated_at", "hire_date") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Finn"], ["last_name", "Stormtrooper"], ["email_address", "fn2187@example.com"], ["active", "t"], ["employee_image_file", "finn-stormtrooper.png"], ["created_at", "2018-03-11 02:32:46.592747"], ["updated_at", "2018-03-11 02:32:46.592747"], ["hire_date", "2018-03-10"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/employees/2
+Completed 302 Found in 8ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2018-03-10 20:32:46 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (The asset "finn-stormtrooper.png" is not present in the asset pipeline.):
+    1: <p><%= image_for(@employee) %></p>
+    2: 
+    3: <h1><%= employee_full_name(@employee) %></h1>
+    4:   <p>
+  
+app/helpers/employees_helper.rb:14:in `image_for'
+app/views/employees/show.html.erb:1:in `_app_views_employees_show_html_erb__299882788198613516_70105857593920'
+Started POST "/employees" for 127.0.0.1 at 2018-03-10 20:32:58 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MS+0dfPQQQglZpNviYUbudlmayfEA6dvM3cnxiI8syaQuO+/SmekNXcU92myXez7LxrOfXeN5Rg2RUT105EIVw==", "employee"=>{"first_name"=>"Finn", "last_name"=>"Stormtrooper", "email_address"=>"fn2187@example.com", "hire_date(1i)"=>"2018", "hire_date(2i)"=>"3", "hire_date(3i)"=>"10", "active"=>"1", "employee_image_file"=>"finn_stormtrooper.png"}, "commit"=>"Create Employee"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "email_address", "active", "employee_image_file", "created_at", "updated_at", "hire_date") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Finn"], ["last_name", "Stormtrooper"], ["email_address", "fn2187@example.com"], ["active", "t"], ["employee_image_file", "finn_stormtrooper.png"], ["created_at", "2018-03-11 02:32:58.153474"], ["updated_at", "2018-03-11 02:32:58.153474"], ["hire_date", "2018-03-10"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/employees/3
+Completed 302 Found in 8ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2018-03-10 20:32:58 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2018-03-10 20:33:02 -0600
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2018-03-10 20:33:05 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (The asset "finn-stormtrooper.png" is not present in the asset pipeline.):
+    1: <p><%= image_for(@employee) %></p>
+    2: 
+    3: <h1><%= employee_full_name(@employee) %></h1>
+    4:   <p>
+  
+app/helpers/employees_helper.rb:14:in `image_for'
+app/views/employees/show.html.erb:1:in `_app_views_employees_show_html_erb__299882788198613516_70105862230640'
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."employee_id" = ?[0m  [["employee_id", 2]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 2]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/employees" for 127.0.0.1 at 2018-03-10 20:34:54 -0600
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2018-03-10 20:34:56 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2018-03-10 20:35:00 -0600
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-10 20:35:06 -0600
+Processing by DashboardsController#index as HTML
+  Rendering dashboards/index.html.erb within layouts/application
+  Rendered dashboards/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2018-03-10 20:35:08 -0600
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2018-03-10 20:35:40 -0600
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2018-03-10 20:35:42 -0600
+Processing by ClientsController#new as HTML
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/_form.html.erb (2.8ms)
+  Rendered clients/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2018-03-10 20:44:02 -0600
+Processing by ClientsController#new as HTML
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/_form.html.erb (1.7ms)
+  Rendered clients/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2018-03-10 20:44:27 -0600
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WAtPewDqN8DRH2ujXld6JSoDvUruFHeKtUAJ6FZIVfb5nBSxuV3S/YNtD6Vlj41n3H8YEF2aNf2wcmrbp+Xuhw==", "client"=>{"first_name"=>"Elise", "last_name"=>"Elaine", "address"=>"123 Main", "email_address"=>"elise@example.com", "date_created(1i)"=>"2018", "date_created(2i)"=>"3", "date_created(3i)"=>"11"}, "commit"=>"Create Client"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/_form.html.erb (2.0ms)
+  Rendered clients/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2018-03-10 20:46:43 -0600
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qM3u/eXyMs8jrTHg9PL77RJids6ORHxmsNtJtfL/pEYJWrU3XEXX8nHfVebPKgyv5B7TlD3KPhG16SqGA1IfNw==", "client"=>{"first_name"=>"Elise", "last_name"=>"Elaine", "address"=>"123 Main", "email_address"=>"elise@example.com", "date_created(1i)"=>"2018", "date_created(2i)"=>"3", "date_created(3i)"=>"11"}, "commit"=>"Create Client"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/_form.html.erb (1.8ms)
+  Rendered clients/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 32ms (Views: 19.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2018-03-10 20:46:55 -0600
+Processing by ClientsController#new as HTML
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/_form.html.erb (1.6ms)
+  Rendered clients/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2018-03-10 20:47:17 -0600
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rn0I6GCTrHqgjYd/Zkm9Sqerg+EZIS6JRR/Oyp5pHPMP6lMi2SRJR/L/43ldkUoIUdcmu6qvbP5ALa35b8Sngg==", "client"=>{"first_name"=>"Elise", "last_name"=>"Elaine", "address"=>"123 Main", "email_address"=>"elise@example.com", "date_created(1i)"=>"2018", "date_created(2i)"=>"3", "date_created(3i)"=>"11"}, "commit"=>"Create Client"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/_form.html.erb (1.8ms)
+  Rendered clients/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2018-03-10 20:47:21 -0600
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/clients" for 127.0.0.1 at 2018-03-10 20:54:58 -0600
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "clients"[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 10:54:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DashboardsController#index as HTML
+  Rendering dashboards/index.html.erb within layouts/application
+  Rendered dashboards/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 106ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+
+

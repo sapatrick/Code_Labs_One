@@ -1,33 +1,33 @@
-<p><%= image_for(@employee) %></p>
+<p><%= image_for(@client) %></p>
 
-<h1><%= employee_full_name(@employee) %></h1>
+<h1><%= client_full_name(@client) %></h1>
   <p>
-    <strong>Sales Team:</strong> <%= @employee.sales_team %>
+    <strong>Sales Team:</strong> <%= @client.sales_team %>
   </p>
   <p>
-  	<strong>Active Employee?:</strong> <%= human_boolean(@employee.active) %>
+  	<strong>Active client?:</strong> <%= human_boolean(@client.active) %>
   </p>
     <p>
-  	<strong>Hire Date:</strong> <%= @employee.hire_date %>
+  	<strong>Hire Date:</strong> <%= @client.hire_date %>
   </p>
   <p>
-  	<strong>Email Address:</strong> <%= @employee.email_address %>
+  	<strong>Email Address:</strong> <%= @client.email_address %>
   </p>
   <p>
-  	<strong>Number of Sales to Date:</strong> <%= @employee.sales_to_date %>
+  	<strong>Number of Sales to Date:</strong> <%= @client.sales_to_date %>
   </p>
 
   <p>
-  	<strong>Number of Sales Last 30 Days:</strong> <%= @employee.sales_last_thirty_days %>
+  	<strong>Number of Sales Last 30 Days:</strong> <%= @client.sales_last_thirty_days %>
   </p>
   <p>
-  	<%= link_to 'Edit Employee', edit_employee_path(@employee), class: 'button' %> | 
-    <%= link_to 'Delete', @employee, 
+  	<%= link_to 'Edit Client', edit_client_path(@client), class: 'button' %> | 
+    <%= link_to 'Delete', @client, 
       class: 'button',
         method: :delete, data: { confirm: 'Are you sure?' } %>    
   </p>
   <p>
-    <%= link_to("Back to Employee List", employees_path) %> | 
+    <%= link_to("Back to Client List", clients_path) %> | 
     <%= link_to("Back to Dashboard", root_path) %>
   </p>
   
