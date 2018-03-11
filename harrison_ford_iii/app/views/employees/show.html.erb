@@ -1,0 +1,33 @@
+<p><%= image_for(@employee) %></p>
+
+<h1><%= employee_full_name(@employee) %></h1>
+  <p>
+    <strong>Sales Team:</strong> <%= @employee.sales_team %>
+  </p>
+  <p>
+  	<strong>Active Employee?:</strong> <%= human_boolean(@employee.active) %>
+  </p>
+    <p>
+  	<strong>Hire Date:</strong> <%= @employee.hire_date %>
+  </p>
+  <p>
+  	<strong>Email Address:</strong> <%= @employee.email_address %>
+  </p>
+  <p>
+  	<strong>Number of Sales to Date:</strong> <%= @employee.sales_to_date.to_i %>
+  </p>
+
+  <p>
+  	<strong>Number of Sales Last 30 Days:</strong> <%= @employee.sales_last_thirty_days.to_i %>
+  </p>
+  <p>
+  	<%= link_to 'Edit Employee', edit_employee_path(@employee), class: 'button' %> | 
+    <%= link_to 'Delete', @employee, 
+      class: 'button',
+        method: :delete, data: { confirm: 'Are you sure?' } %>    
+  </p>
+  <p>
+    <%= link_to("Back to Employee List", employees_path) %> | 
+    <%= link_to("Back to Dashboard", root_path) %>
+  </p>
+  

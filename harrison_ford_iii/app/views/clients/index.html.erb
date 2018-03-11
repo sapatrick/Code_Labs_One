@@ -1,0 +1,16 @@
+<h1>Clients</h1>
+<p>
+	<strong>Number of Clients:</strong>
+	<%= @clients.size.to_i %>
+</p>
+
+<p>
+	<ol>
+	<% @clients.each do |client| %>
+ <li><%= @client.firstname %></li>
+   
+<% end %>
+</ol>
+
+<p>
+	<%= link_to("Back to Dashboard", root_path) %>

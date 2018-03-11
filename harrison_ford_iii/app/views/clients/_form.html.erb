@@ -1,0 +1,29 @@
+<%= form_for(@client) do |f| %>
+  <fieldset>
+  	<p>
+      <%= f.label :first_name, "First Name:" %>
+      <%= f.text_field :first_name %>
+	  </p>
+
+	  <p>
+      <%= f.label :last_name, "Last Name:" %>
+      <%= f.text_field :last_name %>
+	  </p>
+    <p>
+      <%= f.label :address, "Address:" %>
+      <%= f.text_field :address %>
+    </p> 
+    <p>
+      <%= f.label :email_address, "Email Address:" %>
+      <%= f.text_field :email_address %>
+    </p>       
+    <p>
+      <%= f.label :date_created, "Date Created:" %>
+      <%= f.date_select :date_created %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  </fieldset>
+<% end %>
