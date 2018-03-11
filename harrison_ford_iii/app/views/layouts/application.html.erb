@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>HarrisonFordIii</title>
-    <%= csrf_meta_tags %>
+<%= render "layouts/header" %>
+<%= render "layouts/flashes" %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+<div id="wrapper" class="wrapper">
+  <div id="container">
+    <section id="sidebar">
+      <%= render "layouts/sidebar" %>
+    </section>
+    <section id="content">  
+      <%= yield %>
+    </section>
+  </div>
+</div>
+  <%= render "layouts/footer" %>
+

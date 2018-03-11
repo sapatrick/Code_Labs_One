@@ -5,12 +5,15 @@
 </p>
 
 <p>
-	<ol>
-	<% @employees.each do |employee| %>
- <li><%= link_to employee_last_name_first(employee), employee %></li>
-   
-<% end %>
-</ol>
+  <ol>
+    <% @employees.each do |employee| %>
+	  <li class="record">
+	  	<%= link_to employee_last_name_first(employee), employee %>
+	  </li>  
+    <% end %>
+  </ol>
+</p>
+
 
 <p>
 	<%= link_to("Create New Employee", new_employee_path) %>

@@ -22,6 +22,10 @@
       <%= f.check_box :active %>
     </p>
     <p>
+      <%= f.label :sales_team, "Sales Team:" %>
+      <%= f.select :sales_team, Employee::SALESTEAM, prompt: "Pick one" %>
+    </p>
+    <p>
         <%= f.label :employee_image_file %>
         <%= f.text_field :employee_image_file %>
     </p>
