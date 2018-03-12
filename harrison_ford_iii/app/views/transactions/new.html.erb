@@ -1,0 +1,17 @@
+<%= form_for([@employee, @transaction]) do |f| %>
+  <p>
+    <%= f.label :client_name, "Client Name" %><br/>
+    <%= f.text_field :client_name, size: 40, autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :date_completed, "Date Completed:" %>
+    <%= f.date_select :date_completed %>
+  </p>
+  <p>
+    <%= f.label :vehicle, "Vehicle" %><br/>
+    <%= f.text_field :vehicle %>
+  </p>
+  <p>
+    <%= f.submit 'Create Transaction' %>
+  </p>
+<% end %>

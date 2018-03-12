@@ -1,26 +1,5 @@
-<p><%= image_for(@client) %></p>
-
-<h1><%= client_full_name(@client) %></h1>
-  <p>
-    <strong>Sales Team:</strong> <%= @client.sales_team %>
-  </p>
-  <p>
-  	<strong>Active client?:</strong> <%= human_boolean(@client.active) %>
-  </p>
-    <p>
-  	<strong>Hire Date:</strong> <%= @client.hire_date %>
-  </p>
-  <p>
-  	<strong>Email Address:</strong> <%= @client.email_address %>
-  </p>
-  <p>
-  	<strong>Number of Sales to Date:</strong> <%= @client.sales_to_date %>
-  </p>
 
   <p>
-  	<strong>Number of Sales Last 30 Days:</strong> <%= @client.sales_last_thirty_days %>
-  </p>
-  <p class="content-bubble">
   	<%= link_to 'Edit Client', edit_client_path(@client), class: 'button' %> | 
     <%= link_to 'Delete', @client, 
       class: 'button',
@@ -28,6 +7,5 @@
   </p>
   <p>
     <%= link_to("Back to Client List", clients_path) %> | 
-    <%= link_to("Back to Dashboard", root_path) %>
   </p>
   

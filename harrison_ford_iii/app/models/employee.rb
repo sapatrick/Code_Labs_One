@@ -10,4 +10,10 @@ class Employee < ApplicationRecord
  validates :sales_team, inclusion: { in: SALESTEAM }
     
     has_many :clients, dependent: :destroy
+    has_many :transactions, dependent: :destroy
+
+
+  def full_name_displayed
+    "#{first_name} #{last_name}"
+  end
 end

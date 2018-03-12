@@ -41,6 +41,6 @@ def index
 
 private
     def client_params
-    	params.require(:client).permit(:first_name, :last_name, :email_address, :address, :date_created)
+    	params.require(:client).permit(:first_name, :last_name, :email_address, :address)
     end
 end

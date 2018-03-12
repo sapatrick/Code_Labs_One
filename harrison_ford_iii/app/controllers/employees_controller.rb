@@ -22,6 +22,7 @@ class EmployeesController < ApplicationController
 
   def new
   	@employee = Employee.new
+    @client = @employee.clients.new
   end
 
   def create

@@ -5,16 +5,15 @@
 </p>
 
 <p>
-	<ol>
+  <ol>
 	<% @clients.each do |client| %>
- <li><%= @client.firstname %></li>
-   
-<% end %>
-</ol>
+    <div class="record employee-list">
+      <li>
+      	<%= link_to client_full_name(client), client %>
+      </li>
+	</div>    
+    <% end %>
+  </ol>
 <p>
 	<%= link_to("Create New Client", new_client_path) %>
-</p>
-
-<p>
-	<%= link_to("Back to Dashboard", root_path) %>
 </p>

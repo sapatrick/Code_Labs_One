@@ -3,7 +3,7 @@ module EmployeesHelper
   	"#{employee.last_name}, #{employee.first_name}"
   end
 
-    def employee_full_name(employee)
+  def employee_full_name(employee)
     "#{employee.first_name} #{employee.last_name}"
   end
 

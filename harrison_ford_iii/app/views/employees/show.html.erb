@@ -21,13 +21,11 @@
   	<strong>Number of Sales Last 30 Days:</strong> <%= @employee.sales_last_thirty_days.to_i %>
   </p>
   <p>
+    <%= link_to "Transactions Conducted by Employee", employee_transactions_path(@employee), class: 'button' %> | 
   	<%= link_to 'Edit Employee', edit_employee_path(@employee), class: 'button' %> | 
     <%= link_to 'Delete', @employee, 
       class: 'button',
         method: :delete, data: { confirm: 'Are you sure?' } %>    
   </p>
-  <p>
-    <%= link_to("Back to Employee List", employees_path) %> | 
-    <%= link_to("Back to Dashboard", root_path) %>
-  </p>
+
   

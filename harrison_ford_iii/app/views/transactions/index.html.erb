@@ -1,0 +1,16 @@
+<h1> Transaction Register for <%= employee_full_name(@employee) %></h1>
+
+
+  <%= link_to "New Transaction", new_employee_transaction_path(@employee),
+             class: 'button' %>
+
+<ol>
+  <% @transactions.each do |transaction| %>
+    <li>
+      <p>
+        <strong>Date:</strong> <%= transaction.date_completed %> | <strong><%= transaction.client_name %></strong> | <strong>Vehicle:</strong> <%= transaction.vehicle %>
+      </p> 
+    </li>
+
+  <% end %>
+</ol>
