@@ -12299,3 +12299,249 @@ Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.1ms)
 
 
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-03-12 18:16:29 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DashboardsController#index as HTML
+  Rendering dashboards/index.html.erb within layouts/application
+  Rendered dashboards/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (135.1ms)
+  Rendered layouts/_flashes.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 147ms (Views: 141.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2018-03-12 18:16:31 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (27.8ms)
+  Rendered layouts/_header.html.erb (16.2ms)
+  Rendered layouts/_flashes.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 47.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2018-03-12 18:16:33 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (12.2ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `transaction_sum' for #<Employee:0x00007fd6a9a99bb0>
+Did you mean?  transactions
+               transaction
+               transaction_ids
+               transactions=
+               transaction_ids=):
+    15:   </p>
+    16:   <p>
+    17:   	<strong>Number of Sales to Date:</strong> <%= @employee.sales_to_date.to_i %> |
+    18:         <%= format_transactions_sum(@employee) %>
+    19:   </p>
+    20: 
+    21:   <p>
+  
+app/helpers/employees_helper.rb:19:in `format_transactions_sum'
+app/views/employees/show.html.erb:18:in `_app_views_employees_show_html_erb__489533787336940268_70279973058540'
+Started GET "/employees/1" for 127.0.0.1 at 2018-03-12 18:17:07 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+Started GET "/" for 127.0.0.1 at 2018-03-12 18:17:17 -0500
+Started GET "/employees" for 127.0.0.1 at 2018-03-12 18:17:17 -0500
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `transactions_sum' for #<Employee:0x00007fd6a9d06a60>
+Did you mean?  transactions
+               transactions=
+               transaction_ids):
+    15:   </p>
+    16:   <p>
+    17:   	<strong>Number of Sales to Date:</strong> <%= @employee.sales_to_date.to_i %> |
+    18:         <%= format_transactions_sum(@employee) %>
+    19:   </p>
+    20: 
+    21:   <p>
+  
+app/helpers/employees_helper.rb:19:in `format_transactions_sum'
+app/views/employees/show.html.erb:18:in `_app_views_employees_show_html_erb__489533787336940268_70279974354900'
+Processing by EmployeesController#index as HTML
+Processing by DashboardsController#index as HTML
+  Rendering dashboards/index.html.erb within layouts/application
+  Rendered dashboards/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (18.1ms)
+  Rendered layouts/_flashes.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 22.2ms)
+
+
+  Rendering employees/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_header.html.erb (13.3ms)
+  Rendered layouts/_flashes.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 53ms (Views: 26.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-12 18:17:27 -0500
+Processing by DashboardsController#index as HTML
+  Rendering dashboards/index.html.erb within layouts/application
+  Rendered dashboards/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (15.4ms)
+  Rendered layouts/_flashes.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2018-03-12 18:17:28 -0500
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (16.2ms)
+  Rendered layouts/_flashes.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2018-03-12 18:17:29 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (25.0ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `transactions_sum' for #<Employee:0x00005571ad2ac3e8>
+Did you mean?  transactions
+               transactions=
+               transaction_ids):
+    15:   </p>
+    16:   <p>
+    17:   	<strong>Number of Sales to Date:</strong> <%= @employee.sales_to_date.to_i %> |
+    18:         <%= format_transactions_sum(@employee) %>
+    19:   </p>
+    20: 
+    21:   <p>
+  
+app/helpers/employees_helper.rb:19:in `format_transactions_sum'
+app/views/employees/show.html.erb:18:in `_app_views_employees_show_html_erb__489533787336940268_46973362426140'
+Started GET "/employees/1" for 127.0.0.1 at 2018-03-12 18:19:52 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM(transactions) FROM "transactions" WHERE "transactions"."employee_id" = ?[0m  [["employee_id", 1]]
+  Rendered employees/show.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: transactions: SELECT SUM(transactions) FROM "transactions" WHERE "transactions"."employee_id" = ?):
+    15:   </p>
+    16:   <p>
+    17:   	<strong>Number of Sales to Date:</strong> <%= @employee.sales_to_date.to_i %> |
+    18:         <%= format_number_of_all_sales(@employee) %>
+    19:   </p>
+    20: 
+    21:   <p>
+  
+app/models/employee.rb:21:in `number_of_all_sales'
+app/helpers/employees_helper.rb:19:in `format_number_of_all_sales'
+app/views/employees/show.html.erb:18:in `_app_views_employees_show_html_erb__489533787336940268_70279976705740'
+Started GET "/employees/1" for 127.0.0.1 at 2018-03-12 18:20:42 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM() FROM "transactions" WHERE "transactions"."employee_id" = ?[0m  [["employee_id", 1]]
+  Rendered employees/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: wrong number of arguments to function SUM(): SELECT SUM() FROM "transactions" WHERE "transactions"."employee_id" = ?):
+    15:   </p>
+    16:   <p>
+    17:   	<strong>Number of Sales to Date:</strong> <%= @employee.sales_to_date.to_i %> |
+    18:         <%= format_number_of_all_sales(@employee) %>
+    19:   </p>
+    20: 
+    21:   <p>
+  
+app/models/employee.rb:21:in `number_of_all_sales'
+app/helpers/employees_helper.rb:19:in `format_number_of_all_sales'
+app/views/employees/show.html.erb:18:in `_app_views_employees_show_html_erb__489533787336940268_70279977141140'
+Started GET "/employees/1" for 127.0.0.1 at 2018-03-12 18:26:13 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."employee_id" = ?[0m  [["employee_id", 1]]
+  Rendered employees/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (13.5ms)
+  Rendered layouts/_flashes.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 34ms (Views: 21.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2018-03-12 18:26:28 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."employee_id" = ?[0m  [["employee_id", 1]]
+  Rendered employees/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (15.5ms)
+  Rendered layouts/_flashes.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2018-03-12 18:26:35 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions" WHERE "transactions"."employee_id" = ?[0m  [["employee_id", 1]]
+  Rendered employees/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (22.2ms)
+  Rendered layouts/_flashes.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-12 18:26:47 -0500
+Processing by DashboardsController#index as HTML
+  Rendering dashboards/index.html.erb within layouts/application
+  Rendered dashboards/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (14.7ms)
+  Rendered layouts/_flashes.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+

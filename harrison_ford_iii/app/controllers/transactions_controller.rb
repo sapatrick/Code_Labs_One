@@ -1,16 +1,15 @@
 class TransactionsController < ApplicationController
+before_action :set_employee
+
   def index
-    @employee = Employee.first
     @transactions = @employee.transactions
   end
 
   def new
-    @employee = Employee.first
     @transaction = @employee.transactions.new
   end
 
   def create
-  	@employee = Employee.first
     @transaction = @employee.transactions.new(transaction_params)
     if @transaction.save
       redirect_to employee_transactions_path(@employee),

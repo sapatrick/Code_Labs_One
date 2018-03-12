@@ -15,6 +15,7 @@ module EmployeesHelper
     end
   end
 
+
   #def employee_image(employee, class_name)
   #  if employee.employee_image_file.blank?
   #    if (!class_name.blank?)

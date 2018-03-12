@@ -14,7 +14,8 @@
   	<strong>Email Address:</strong> <%= @employee.email_address %>
   </p>
   <p>
-  	<strong>Number of Sales to Date:</strong> <%= @employee.sales_to_date.to_i %>
+  	<strong>Number of Sales to Date:</strong>
+        <%= @employee.transactions.size.to_i %>
   </p>
 
   <p>
