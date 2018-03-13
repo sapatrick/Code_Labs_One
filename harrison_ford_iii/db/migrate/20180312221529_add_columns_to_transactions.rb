@@ -11,3 +11,5 @@ class AddColumnsToTransactions < ActiveRecord::Migration[5.1]
   	remove_column :transactions, :vehicle, :string
   end
 end
+
+c = Client.new(first_name: "Elise", last_name: "Elaine", email_address: "elise@example.com", address: "123 main")

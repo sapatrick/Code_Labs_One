@@ -16,7 +16,12 @@
     <h1>Harrison Ford Dealership</h1>
     <nav>
       <p>
-
+          <% if current_admin %>
+              <%= link_to current_admin.name, current_admin %>
+              <%= link_to 'Log Out', session_path, method: :delete, class: 'button' %>
+            <% else %>
+              <%= link_to 'Log In', new_session_path, class: 'button' %>
+            <% end %>
       </p>
     </nav>
   </div>

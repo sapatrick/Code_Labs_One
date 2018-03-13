@@ -8,7 +8,7 @@
   <% @transactions.each do |transaction| %>
     <li>
       <p>
-        <strong>Date:</strong> <%= transaction.date_completed %> | <strong><%= transaction.client_name %></strong> | <strong>Vehicle:</strong> <%= transaction.vehicle %>
+        <strong>Date:</strong> <%= transaction.date_completed %> | <strong><%= transaction.client.first_name %> <%= transaction.client.last_name %></strong> | <strong>Vehicle:</strong> <%= transaction.vehicle %>
       </p> 
     </li>
 

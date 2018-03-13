@@ -27,7 +27,7 @@ before_action :set_employee
 private
 
   def transaction_params
-    params.require(:transaction).permit(:date_completed, :client_name, :vehicle)
+    params.require(:transaction).permit(:date_completed, :vehicle)
   end
 
   def set_employee

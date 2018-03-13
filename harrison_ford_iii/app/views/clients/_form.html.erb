@@ -21,9 +21,7 @@
       <%= f.label :date_created, "Date Created:" %>
       <%= f.date_select :date_created %>
     </p>
-    <p>
-      <%= collection_select(:client, :employee, Employee.all, :id, :full_name_displayed, prompt: true) %>
-    </p>
+
 
     <p>
       <%= f.submit %>
